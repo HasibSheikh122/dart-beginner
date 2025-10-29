@@ -5,17 +5,20 @@ void main() {
   student.name = 'Hasib';
   student.age = 27;
   student.address = 'Fulbarigate, KUET, Khulna';
+  Student.institution = 'RU';
 
   Student student2 = Student();
   student2.name = 'Abdullah';
   student2.age = 24;
   student2.address = 'Fulbarigate, KUET, Khulna';
+  Student.institution = 'KUET';
 
   student.playing();
   student2.playing();
   studentList.add(student);
   studentList.add(student2);
   print(studentList);
+  print(Student.institution);
 
   Teacher chemistryTeacher = Teacher(
     name: 'Zarin Maam',
@@ -30,6 +33,7 @@ class Student {
   String name = '';
   String address = '';
   int age = 0;
+  static String institution = 'Dhaka University';
 
   // Constructor automatic tigger hoi
   Student() {
@@ -43,6 +47,11 @@ class Student {
   // Method kaje lage function er behavior er jonno
   void printSomething() {
     print('Something');
+  }
+
+  static doAnything() {
+    // ei khane sudu static gula access kora jabe
+    institution;
   }
 }
 
