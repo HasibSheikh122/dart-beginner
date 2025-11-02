@@ -16,6 +16,12 @@ class Student extends Human {
   String institute;
   String section;
 
+  @override
+  void moving() {
+    super.moving();
+    print('Dancing');
+  }
+
   Student(int hands, int legs, this.institute, this.section)
     : super(hands, legs);
 }
